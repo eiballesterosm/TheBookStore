@@ -45,9 +45,9 @@ namespace TheBookStore.Controllers
             return Created(url, newReview);
         }
 
-        public IHttpActionResult Delete(int reviewId)
+        public IHttpActionResult Delete(int id)
         {
-            unit.Reviews.RemoveReview(reviewId);
+            unit.Reviews.RemoveReview(id);
             unit.Commit();
 
             return StatusCode(HttpStatusCode.NoContent);

@@ -50,7 +50,7 @@ namespace TheBookStore.Datastores
 
         public void Commit()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }
