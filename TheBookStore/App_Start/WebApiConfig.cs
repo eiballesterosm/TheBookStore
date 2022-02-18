@@ -21,6 +21,8 @@ namespace TheBookStore
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            config.DependencyResolver = new ServiceResolver();
+
             config.Filters.Add(new EnforceHttpsAttribute());
             config.MessageHandlers.Add(new RateLimitHandler());
             config.MessageHandlers.Add(new BasicAuthenticationHandler(new CustomPrincipalProvider()));

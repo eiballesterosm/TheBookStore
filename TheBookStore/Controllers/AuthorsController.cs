@@ -15,9 +15,9 @@ namespace TheBookStore.Controllers
     {
         IUnitOfWork unit;
 
-        public AuthorsController()
+        public AuthorsController(IUnitOfWork unit)
         {
-            unit = new SampleDataStore();
+            this.unit = unit;
         }
 
         public IHttpActionResult Get()
