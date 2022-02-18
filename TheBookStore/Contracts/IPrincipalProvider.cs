@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TheBookStore.Contracts
 {
-    interface IPrincipalProvider
+    public interface IPrincipalProvider
     {
         IPrincipal CreatePrincipal(string username, string password);
     }

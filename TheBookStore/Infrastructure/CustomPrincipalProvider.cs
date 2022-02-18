@@ -10,7 +10,7 @@ namespace TheBookStore.Infrastructure
     public class CustomPrincipalProvider : IPrincipalProvider
     {
         private const string username = "fanier";
-        private const string password = "secretpassword";
+        private const string password = "123456789";
 
         public IPrincipal CreatePrincipal(string username, string password)
         {
