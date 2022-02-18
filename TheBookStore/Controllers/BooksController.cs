@@ -8,6 +8,7 @@ using TheBookStore.App_Start;
 using TheBookStore.Contracts;
 using TheBookStore.Datastores;
 using TheBookStore.DTO;
+using TheBookStore.Infrastructure;
 
 namespace TheBookStore.Controllers
 {
@@ -48,6 +49,7 @@ namespace TheBookStore.Controllers
             return Ok(response);
         }
 
+        [CheckNullsAttribute]
         public IHttpActionResult Get(int id)
         {
             var book = unit.Books.GetOne(id);
